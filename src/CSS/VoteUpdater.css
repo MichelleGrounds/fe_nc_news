@@ -1,9 +1,23 @@
 .commentVoteUpdater {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
-.commentVoteButtons {
-  display: flex;
-  justify-content: space around;
+@media only screen and (max-width: 600px) {
+  .commentVoteButtonsDiv {
+    display: flex;
+    justify-content: space around;
+  }
+}
+
+.notActiveButton {
+  pointer-events: none;
+  cursor: default;
+  opacity: 0.3;
+}
+
+.fontAwesomeButton {
+  font-size: 1.5em;
+  padding-top: 5%;
 }

@@ -41,6 +41,7 @@ export default class SingleArticlePage extends Component {
         this.setState({ article, isLoading: false, err: null });
       })
       .catch(err => {
+        console.dir(err.response);
         this.setState({
           err: { status: err.response.status, msg: err.response.data },
           isLoading: false

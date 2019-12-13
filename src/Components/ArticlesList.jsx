@@ -24,11 +24,9 @@ export default class ArticlesList extends Component {
     }
     return (
       <div>
-        {/* <h2 className="articlesListh2Header">{this.props.topic || "home"}</h2> */}
         <ArticleSorter
           className="articleSorterList"
-          updateSortBy={this.updateSortBy}
-          updateOrder={this.updateOrder}
+          updateSortAndOrder={this.updateSortAndOrder}
         />
         <Pagination
           total_count={this.state.total_count}
@@ -52,23 +50,12 @@ export default class ArticlesList extends Component {
     );
   }
 
+  updateSortAndOrder = (key, value) => {
+    this.setState({ [key]: value });
+  };
   changePage = p => {
     this.setState(currentState => {
       return { p: currentState.p + p };
-    });
-  };
-  
-  updateSortBy = sort_by => {
-    this.setState(currentState => {
-      return { sort_by };
-    });
-  };
-
-  updateOrder = order => {
-    this.setState(currentState => {
-      if (currentState.sort_by !== order) {
-        return { order };
-      }
     });
   };
 

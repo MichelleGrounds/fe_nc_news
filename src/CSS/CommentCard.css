@@ -6,6 +6,19 @@
   border: 1px outset #e8c54775;
 }
 
+@media only screen and (min-width: 600px) {
+  .commentListItem {
+    display: grid;
+    grid-template-columns: auto 10%;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .commentListUpdateVotes {
+    align-self: center;
+  }
+}
+
 .commentCreatedAt {
   font-style: italic;
   color: #326273;

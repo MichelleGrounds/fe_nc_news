@@ -13,7 +13,7 @@ export default class CommentAdder extends Component {
       return <p>Please log in before posting a comment</p>;
     }
     return (
-      <form className="commentAddForm">
+      <form className="commentAddForm" onSubmit={this.handleSubmit}>
         <p>Logged in as {this.props.currentUser}</p>
         <label>
           Comment:
@@ -21,10 +21,10 @@ export default class CommentAdder extends Component {
             name="commentInput"
             value={this.state.commentInput}
             onChange={this.handleInput}
-            required
+            required={true}
           ></input>
         </label>
-        <button onClick={this.handleSubmit}>Submit Comment</button>
+        <button>Submit Comment</button>
         {err && <ErrorDisplay err={err} />}
       </form>
     );

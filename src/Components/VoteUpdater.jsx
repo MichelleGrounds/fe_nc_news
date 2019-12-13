@@ -8,23 +8,29 @@ import "../CSS/VoteUpdater.css";
 export default class VoteUpdater extends Component {
   state = {
     voteDifference: 0,
-    err: null,
-    voted: false
+    voted: 0,
+    err: null
   };
 
   render() {
-    const { err } = this.state;
+    const { err, voted } = this.state;
     return (
       <div className="commentVoteUpdater">
-        <p>Votes: {this.props.votes + this.state.voteDifference}</p>
-        <div className="commentVoteButtons">
+        <div className="commentVoteButtonsDiv">
           <FontAwesomeIcon
+            className={`fontAwesomeButton ${
+              voted > 0 ? "notActiveButton" : null
+            }`}
             onClick={() => {
               this.patchVotes(1);
             }}
             icon={faArrowUp}
           />
+          <p>Votes: {this.props.votes + this.state.voteDifference}</p>
           <FontAwesomeIcon
+            className={`fontAwesomeButton ${
+              voted < 0 ? "notActiveButton" : null
+            }`}
             onClick={() => {
               this.patchVotes(-1);
             }}
@@ -35,6 +41,7 @@ export default class VoteUpdater extends Component {
       </div>
     );
   }
+
   patchCommentVotes = (comment_id, voteChange) => {
     return api.patchCommentVotes(comment_id, voteChange);
   };
@@ -47,8 +54,8 @@ export default class VoteUpdater extends Component {
     this.setState(currentState => {
       return {
         voteDifference: currentState.voteDifference + voteChange,
-        voted: true,
-        err: null
+        err: null,
+        voted: currentState.voted + voteChange
       };
     });
     (this.props.article_id
