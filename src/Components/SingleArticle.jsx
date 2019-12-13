@@ -1,5 +1,6 @@
 import React from "react";
 import moment from "moment";
+import VoteButton from "./VoteButton";
 import "../CSS/SingleArticle.css";
 
 function SingleArticle(props) {
@@ -16,6 +17,7 @@ function SingleArticle(props) {
         Comments: {article.comment_count}
       </p>
       <p className="singleArticleVotes">Votes: {article.votes}</p>
+      <VoteButton article_id={article.article_id} votes={article.votes} />
     </section>
   );
 }

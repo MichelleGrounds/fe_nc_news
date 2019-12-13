@@ -1,6 +1,6 @@
 import React from "react";
 import "../CSS/CommentCard.css";
-import CommentVoteUpdater from "./CommentVoteUpdater";
+import CommentVoteUpdater from "./VoteUpdater";
 import DeleteButton from "./DeleteButton";
 import moment from "moment";
 

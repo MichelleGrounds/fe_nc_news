@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import SingleArticle from "./SingleArticle";
-import VoteButton from "./VoteButton";
 import CommentList from "./CommentList";
 import * as api from "../api";
 
@@ -27,10 +26,6 @@ export default class SingleArticlePage extends Component {
     return (
       <div className="singleArticlePage">
         <SingleArticle article={article} />
-        <VoteButton
-          article_id={article.article_id}
-          alterVoteCount={this.alterVoteCount}
-        />
         <CommentList
           article_id={article.article_id}
           currentUser={this.props.currentUser}
@@ -39,19 +34,19 @@ export default class SingleArticlePage extends Component {
     );
   }
 
-  alterVoteCount = vote => {
-    api
-      .patchArticleVotes(this.state.article.article_id, vote)
-      .then(article => {
-        this.setState({ article, err: null });
-      })
-      .catch(err => {
-        this.setState({
-          err: { status: err.response.status, msg: err.response.data },
-          isLoading: false
-        });
-      });
-  };
+  // alterVoteCount = vote => {
+  //   api
+  //     .patchArticleVotes(this.state.article.article_id, vote)
+  //     .then(article => {
+  //       this.setState({ article, err: null });
+  //     })
+  //     .catch(err => {
+  //       this.setState({
+  //         err: { status: err.response.status, msg: err.response.data },
+  //         isLoading: false
+  //       });
+  //     });
+  // };
 
   retrieveArticle = () => {
     api

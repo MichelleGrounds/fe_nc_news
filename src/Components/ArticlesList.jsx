@@ -57,6 +57,7 @@ export default class ArticlesList extends Component {
       return { p: currentState.p + p };
     });
   };
+  
   updateSortBy = sort_by => {
     this.setState(currentState => {
       return { sort_by };

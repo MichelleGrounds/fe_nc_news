@@ -5,7 +5,7 @@ import { faArrowUp, faArrowDown } from "@fortawesome/free-solid-svg-icons";
 import * as api from "../api";
 import "../CSS/CommentVoteUpdater.css";
 
-export default class CommentVoteUpdater extends Component {
+export default class VoteUpdater extends Component {
   state = {
     voteDifference: 0,
     err: null,
@@ -35,6 +35,13 @@ export default class CommentVoteUpdater extends Component {
       </div>
     );
   }
+  patchCommentVotes = (comment_id, voteChange) => {
+    return api.patchCommentVotes(comment_id, voteChange);
+  };
+
+  patchArticleVotes = (article_id, voteChange) => {
+    return api.patchArticleVotes(article_id, voteChange);
+  };
 
   patchVotes = voteChange => {
     this.setState(currentState => {
@@ -44,16 +51,17 @@ export default class CommentVoteUpdater extends Component {
         err: null
       };
     });
-    return api
-      .patchCommentVotes(this.props.comment_id, voteChange)
-      .catch(err => {
-        this.setState(currentState => {
-          return {
-            err: { status: err.response.status, msg: err.response.data },
-            voteDifference: currentState.voteDifference - voteChange,
-            votes: false
-          };
-        });
+    (this.props.article_id
+      ? this.patchArticleVotes(this.props.article_id, voteChange)
+      : this.patchCommentVotes(this.props.comment_id, voteChange)
+    ).catch(err => {
+      this.setState(currentState => {
+        return {
+          err: { status: err.response.status, msg: err.response.data },
+          voteDifference: currentState.voteDifference - voteChange,
+          votes: false
+        };
       });
+    });
   };
 }
