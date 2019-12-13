@@ -3,7 +3,7 @@ import ErrorDisplay from "./ErrorDisplay";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUp, faArrowDown } from "@fortawesome/free-solid-svg-icons";
 import * as api from "../api";
-import "../CSS/CommentVoteUpdater.css";
+import "../CSS/VoteUpdater.css";
 
 export default class VoteUpdater extends Component {
   state = {

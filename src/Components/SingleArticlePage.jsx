@@ -34,20 +34,6 @@ export default class SingleArticlePage extends Component {
     );
   }
 
-  // alterVoteCount = vote => {
-  //   api
-  //     .patchArticleVotes(this.state.article.article_id, vote)
-  //     .then(article => {
-  //       this.setState({ article, err: null });
-  //     })
-  //     .catch(err => {
-  //       this.setState({
-  //         err: { status: err.response.status, msg: err.response.data },
-  //         isLoading: false
-  //       });
-  //     });
-  // };
-
   retrieveArticle = () => {
     api
       .getSingleArticle(this.props.article_id)
