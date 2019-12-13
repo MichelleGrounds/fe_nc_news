@@ -20,7 +20,7 @@ export default class SingleArticlePage extends Component {
     if (err) {
       return (
         <p>
-          {err.status} - {err.msg}{" "}
+          {err.status} - {err.msg.msg}{" "}
         </p>
       );
     }
@@ -47,7 +47,8 @@ export default class SingleArticlePage extends Component {
       })
       .catch(err => {
         this.setState({
-          err: { status: err.response.status, msg: err.response.data }
+          err: { status: err.response.status, msg: err.response.data },
+          isLoading: false
         });
       });
   };
@@ -60,7 +61,8 @@ export default class SingleArticlePage extends Component {
       })
       .catch(err => {
         this.setState({
-          err: { status: err.response.status, msg: err.response.data }
+          err: { status: err.response.status, msg: err.response.data },
+          isLoading: false
         });
       });
   };
