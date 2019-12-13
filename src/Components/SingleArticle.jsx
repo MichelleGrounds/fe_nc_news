@@ -7,6 +7,7 @@ function SingleArticle(props) {
   const { article } = props;
   return (
     <section className="singleArticleSection">
+      <div className="singleArticleBody"></div>
       <h2 className="singleArticleh2Header">{article.title}</h2>
       <h5 className="articleAuthorAndCreation">
         created by {article.author} on{" "}
