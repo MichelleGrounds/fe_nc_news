@@ -1,0 +1,22 @@
+.paginationDisplay {
+  padding-top: 1em;
+  /* display: flex;
+  justify-content: space-around; */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  font-size: 14px;
+}
+
+.paginationButton {
+  width: 6em;
+  background-color: #ffe2d1;
+  height: 2em;
+  border-radius: 3px;
+  place-self: center;
+}
+
+/* E8C547 */
+/* FFFD98
+E9D758
+ */

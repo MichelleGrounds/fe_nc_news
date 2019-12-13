@@ -1,0 +1,11 @@
+.dropDownUserSelectionButton {
+  margin-bottom: 1em;
+  background-color: #ffe2d1;
+  border-radius: 3px;
+  color: #223843;
+}
+
+.dropdownShowUsers {
+  color: #223843;
+  padding-bottom: 1em;
+}

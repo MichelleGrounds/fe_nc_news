@@ -1,0 +1,28 @@
+.mainNavigationBar {
+  background-color: #326273;
+  display: flex;
+  justify-content: space-around;
+  color: red;
+  box-shadow: 0 2px 6px 0 hsla(0, 0%, 0%, 0.2);
+}
+
+.navigationLinks {
+  text-decoration: none;
+  color: #e9d758;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 20px;
+}
+
+.navigationLinks:hover {
+  background-color: #5c9ead;
+}
+
+.focussedNavigationLink {
+  background-color: #5c9ead;
+}
+
+/* E8C547 */
+/* FFFD98
+E9D758
+ */

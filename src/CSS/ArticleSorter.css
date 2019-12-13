@@ -1,0 +1,12 @@
+.articleSortOrderSelectForm {
+  padding-top: 1em;
+  font-size: 14px;
+  color: #326273;
+}
+
+.articleSortOrderSelect {
+  color: #326273;
+  font-size: 14px;
+  border: 1px #ffe2d1 outset;
+  border-color: #ffe2d1;
+}

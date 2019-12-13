@@ -1,0 +1,20 @@
+.commentListItem {
+  list-style-type: none;
+  border: 1px outset rgb(70, 69, 69);
+  margin: 1em;
+  text-align: center;
+  color: #326273;
+}
+
+.commentCreatedAt {
+  font-style: italic;
+  color: #326273;
+}
+
+.commentBody {
+  color: #2b5563;
+}
+
+.commentAuthor {
+  color: #2c4957;
+}

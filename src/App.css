@@ -1,0 +1,12 @@
+.App {
+  text-align: center;
+  background-color: #eeeeee;
+}
+body {
+  background-color: #eeeeee;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
