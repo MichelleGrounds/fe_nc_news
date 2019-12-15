@@ -1,10 +1,7 @@
 .paginationDisplay {
   padding-top: 1em;
-  /* display: flex;
-  justify-content: space-around; */
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-
   font-size: 14px;
 }
 

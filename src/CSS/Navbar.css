@@ -9,9 +9,9 @@
 .navigationLinks {
   text-decoration: none;
   color: #e9d758;
-  padding: 14px 16px;
+  padding: 0.6em 0em;
   transition: 0.3s;
-  font-size: 20px;
+  font-size: 120%;
 }
 
 .navigationLinks:hover {

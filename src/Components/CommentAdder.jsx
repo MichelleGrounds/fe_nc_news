@@ -24,7 +24,7 @@ export default class CommentAdder extends Component {
             required={true}
           ></input>
         </label>
-        <button>Submit Comment</button>
+        <button className="submitCommentButton">Submit Comment</button>
         {err && <ErrorDisplay err={err} />}
       </form>
     );

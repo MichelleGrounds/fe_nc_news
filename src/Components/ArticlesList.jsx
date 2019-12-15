@@ -78,7 +78,8 @@ export default class ArticlesList extends Component {
       })
       .catch(err => {
         this.setState({
-          err: { status: err.response.status, msg: err.response.data }
+          err: { status: err.response.status, msg: err.response.data },
+          isLoading: false
         });
       });
   };

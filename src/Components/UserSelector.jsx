@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import DropdownUserSelection from "./DropdownUserSelection";
+import DropdownUserSelection from "./UserLogin";
 import * as api from "../api";
 
 export default class UserSelector extends Component {
@@ -16,6 +16,7 @@ export default class UserSelector extends Component {
       <div>
         <DropdownUserSelection
           selectCurrentUser={this.props.selectCurrentUser}
+          currentUser={this.props.currentUser}
           users={this.state.users}
         />
       </div>

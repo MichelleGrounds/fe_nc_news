@@ -10,11 +10,15 @@ import "./App.css";
 
 export default class App extends Component {
   state = { currentUser: "" };
+
   render() {
     return (
       <div className="App">
+        <UserSelector
+          selectCurrentUser={this.selectCurrentUser}
+          currentUser={this.state.currentUser}
+        />
         <Header user={this.state.currentUser} />
-        <UserSelector selectCurrentUser={this.selectCurrentUser} />
         <Navbar />
         <Router primary={false}>
           <ArticlesList path="/" />
