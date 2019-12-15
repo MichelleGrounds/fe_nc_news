@@ -8,7 +8,6 @@ export default class DropdownUserSelection extends Component {
   };
 
   render() {
-    console.log(this.props.currentUser);
     return (
       <div>
         {!this.props.currentUser ? (
@@ -33,7 +32,10 @@ export default class DropdownUserSelection extends Component {
                 required
               ></input>
             </label>
-            <button className="loginSubmitButton" type="submit">Submit</button>
+
+            <button className="loginSubmitButton" type="submit">
+              Submit
+            </button>
           </form>
         ) : (
           <form onSubmit={this.handleLogout}>
