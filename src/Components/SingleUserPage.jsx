@@ -1,5 +1,7 @@
 import React, { Component } from "react";
+import { Link } from "@reach/router";
 import * as api from "../api";
+import "../CSS/SingleUserPage.css";
 
 export default class SingleUserPage extends Component {
   state = {
@@ -14,23 +16,32 @@ export default class SingleUserPage extends Component {
       return <p>Loading...</p>;
     }
     return (
-      <div>
+      <div className="userArticlesPage">
         <img src={`${user.avatar_url}`} alt="user avatar"></img>
         <p>{user.username}</p>
         <p>Name: {user.name}</p>
         {articles.length < 1 ? (
           <p>User has not written any articles yet</p>
         ) : (
-          <ul className="unorderedUserArticleList">
-            Articles Written By User:
-            {articles.map(article => {
-              return (
-                <li className="userArticleLinks" key={article.article_id}>
-                  <p>{article.title}</p>
-                </li>
-              );
-            })}{" "}
-          </ul>
+          <div>
+            <p className="userArticleUnorderedListHeader">
+              Articles Written By User:
+            </p>
+            <ul className="unorderedUserArticleList">
+              {articles.map(article => {
+                return (
+                  <li className="userArticleListItems" key={article.article_id}>
+                    <Link
+                      className="userArticleCardLink"
+                      to={`/articles/${article.article_id}`}
+                    >
+                      {article.title}
+                    </Link>
+                  </li>
+                );
+              })}{" "}
+            </ul>
+          </div>
         )}
       </div>
     );

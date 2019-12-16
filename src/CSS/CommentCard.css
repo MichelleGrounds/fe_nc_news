@@ -2,7 +2,7 @@
   list-style-type: none;
   margin: 1em;
   text-align: center;
-  color: #326273;
+  color: #2b5563;
   border: 1px outset #e8c54775;
 }
 
@@ -21,7 +21,7 @@
 
 .commentCreatedAt {
   font-style: italic;
-  color: #326273;
+  color: #2b5563;
 }
 
 .commentBody {

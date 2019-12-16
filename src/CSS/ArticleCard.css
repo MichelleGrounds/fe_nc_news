@@ -1,7 +1,7 @@
 .articleListItem {
   list-style-type: none;
   border: 1px outset #e8c54775;
-  color: #326273;
+  color: #2b5563;
   /* color: #2b5563; */
   /* <- gives the right level of contrast */
   padding: 1em;
@@ -17,11 +17,11 @@
 
 .articleCardh4Header {
   font-style: italic;
-  color: #326273;
+  color: #2b5563;
 }
 
 .articleCardh5Header {
-  color: #326273;
+  color: #2b5563;
 }
 .commentAndVotesArticleCard {
   color: #223843;
