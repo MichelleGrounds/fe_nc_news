@@ -6,6 +6,12 @@ export const deleteCommentById = comment_id => {
   return axios.delete(`${baseUrl}/comments/${comment_id}`);
 };
 
+export const requestSingleUsers = username => {
+  return axios.get(`${baseUrl}/users/${username}`).then(({ data }) => {
+    return data.user;
+  });
+};
+
 export const requestUsers = () => {
   return axios.get(`${baseUrl}/users`).then(({ data }) => {
     return data.users;
@@ -33,11 +39,12 @@ export const addComment = (article_id, author, commentBody) => {
     });
 };
 
-export const getArticles = (topic, sort_by, order, limit, p) => {
+export const getArticles = (topic, author, sort_by, order, limit, p) => {
   return axios
     .get(`${baseUrl}/articles`, {
       params: {
         topic,
+        author,
         sort_by,
         order,
         limit,

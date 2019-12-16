@@ -50,7 +50,8 @@ export default class DropdownUserSelection extends Component {
     this.setState({ [event.target.name]: event.target.value });
   };
 
-  handleLogout = () => {
+  handleLogout = event => {
+    event.preventDefault();
     this.props.selectCurrentUser("");
   };
 

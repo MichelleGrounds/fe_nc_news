@@ -11,19 +11,6 @@ export default class Navbar extends Component {
     selectedTopic: "home"
   };
 
-  componentDidMount = () => {
-    api
-      .getTopics()
-      .then(topics => {
-        this.setState({ topics, isLoading: false });
-      })
-      .catch(err => {
-        this.setState({
-          err: { status: err.response.status, msg: err.response.data }
-        });
-      });
-  };
-
   handleClick = event => {
     this.setState({ selectedTopic: event.target.innerText });
   };
@@ -68,7 +55,28 @@ export default class Navbar extends Component {
             </Link>
           );
         })}
+        <Link
+          onClick={this.handleClick}
+          className={`navigationLinks ${
+            this.state.selectedTopic === "home" ? "focussedNavigationLink" : ""
+          }`}
+          to="/users"
+        >
+          users
+        </Link>
       </nav>
     );
   }
+  componentDidMount = () => {
+    api
+      .getTopics()
+      .then(topics => {
+        this.setState({ topics, isLoading: false });
+      })
+      .catch(err => {
+        this.setState({
+          err: { status: err.response.status, msg: err.response.data }
+        });
+      });
+  };
 }
