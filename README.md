@@ -30,7 +30,7 @@ cd nc_news_project
 
 ```
 
-###Dependencies 
+### Dependencies 
 
     
 | Dependency    | Version |
