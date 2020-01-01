@@ -13,10 +13,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Deployed version
 
-This project is available to view [here](https://ncnewsjbv2.herokuapp.com/)
+This project is available to view [here](https://nc-news-project-michelle.herokuapp.com/)
 
 ## Back End
-The back end repository for this project is available [here](https://github.com/Baileex/be-nc-news-v2)
+The back end repository for this project is available [here](https://github.com/MichelleGrounds/nc_news_project)
 
 ## How to run this project locally
 
@@ -24,9 +24,9 @@ The back end repository for this project is available [here](https://github.com/
 Pre-requisites: node.js 12.13.0
 
 ```
-git clone https://github.com/Baileex/FE-NC-NEWS-v2
+git clone https://github.com/MichelleGrounds/nc_news_project
 
-cd fe-nc-news
+cd nc_news_project
 
 ```
 
