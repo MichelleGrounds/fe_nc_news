@@ -29,6 +29,9 @@ git clone https://github.com/Baileex/FE-NC-NEWS-v2
 cd fe-nc-news
 
 ```
+
+###Dependencies 
+
     
 | Dependency    | Version |
 | ------------- | ------- |
