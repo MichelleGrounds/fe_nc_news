@@ -15,6 +15,17 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 This project is available to view [here](https://nc-news-project-michelle.herokuapp.com/)
 
+There are currently hardcoded logins for the app.
+
+| Username | password | 
+| ---------- | ------- | 
+| grumpy19 | test |
+| weegembump | test | 
+| happyamy2016 | test |
+| jessjelly | test | 
+| tickle122 | test | 
+| cooljmessy | test |
+
 ## Back End
 The back end repository for this project is available [here](https://github.com/MichelleGrounds/nc_news_project)
 
