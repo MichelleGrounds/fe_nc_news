@@ -7,7 +7,6 @@ This project is a news style site with functions including:
 * viewing individual articles and comments
 * article/comment voting
 * comment posting/deleting
-* adding new topics
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
